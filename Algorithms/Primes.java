@@ -28,6 +28,7 @@ public class Primes {
 
 
     //Better way to find if a number is prime or not
+    
     public static boolean isPrime(long n) {
         if(n < 2) return false;
         if(n == 2 || n == 3) return true;
