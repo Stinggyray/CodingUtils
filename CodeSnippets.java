@@ -1,8 +1,6 @@
 package Utils;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -45,47 +43,12 @@ public class CodeSnippets {
         //-------------------------
         // BUFFERED READER
         //-------------------------
-        BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
 
-        ArrayList<String> bufSplit = new ArrayList<>(Arrays.asList(buf.readLine().split(" ")));
-
-
-
+        //See SpeedyInputs
     }
 
     //I don't know how this works. It's also really inefficient.
-    public static boolean mystery (int n) {
+    public static boolean getPrimes (int n) {
         return !new String(new char[n]).matches(".?|(..+?)\\1+");
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //This one works better.
-    public static boolean isPrime(long n) {
-        if(n < 2) return false;
-        if(n == 2 || n == 3) return true;
-        if(n%2 == 0 || n%3 == 0) return false;
-        long sqrtN = (long)Math.sqrt(n)+1;
-        for(long i = 6L; i <= sqrtN; i += 6) {
-            if(n%(i-1) == 0 || n%(i+1) == 0) return false;
-        }
-        return true;
     }
 }
